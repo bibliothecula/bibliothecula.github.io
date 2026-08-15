@@ -1,4 +1,7 @@
 theme: jekyll-theme-slate
 title: Bibliothecula
-description: This is an open source, community led database project (primarily) concerned with documenting microbes, 
-biomolecules, microhabitats, small macrobial life and their habitats, etc.
+description: >
+  This is an open source, community led database project (primarily) concerned with documenting microbes, 
+  biomolecules, microhabitats, small macrobial life and their habitats, etc.
+
+
