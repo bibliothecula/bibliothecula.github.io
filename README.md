@@ -1,4 +1,1 @@
-# Bibliothecula
-___
-This is an open source, community led database project (primarily) concerned with documenting microbes, 
-biomolecules, microhabitats, small macrobial life and their habitats, etc.
+
