@@ -106,7 +106,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Bibliothetica, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Bibliothecula, Inc.`,
       },
       prism: {
         theme: prismThemes.github,
