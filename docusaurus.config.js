@@ -74,6 +74,8 @@ const config = {
     ],
   ],
 
+  themes: ['cosmos-docusaurus-theme'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
