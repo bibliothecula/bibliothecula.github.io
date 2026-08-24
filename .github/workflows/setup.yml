@@ -21,10 +21,11 @@ jobs:
 
       - name: Create Docusaurus
         run: |
-          npx create-docusaurus@latest temp-site classic
+          npx create-docusaurus@latest temp-site classic --javascript
 
-          cp -r temp-site/* .
-          cp -r temp-site/.* . 2>/dev/null || true
+      - name: Copy Docusaurus files
+        run: |
+          cp -r temp-site/. .
           rm -rf temp-site
 
       - name: Commit Docusaurus project
