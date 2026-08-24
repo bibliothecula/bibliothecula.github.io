@@ -1,0 +1,36 @@
+name: Create Docusaurus Site
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Create Docusaurus
+        run: |
+          npx create-docusaurus@latest temp-site classic
+
+          cp -r temp-site/* .
+          cp -r temp-site/.* . 2>/dev/null || true
+          rm -rf temp-site
+
+      - name: Commit Docusaurus project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Initialize Docusaurus"
+          git push
