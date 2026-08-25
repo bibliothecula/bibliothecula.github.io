@@ -77,21 +77,18 @@ const config = {
   themes: ['cosmos-docusaurus-theme'],
 
   themeConfig:
-    import docsearch from '@docsearch/js';
-    import '@docsearch/css';
-    
-    docsearch({
-      container: '#docsearch',
-      appId: 'O42K63FG2E',
-      indexName: 'SpiderJockey',
-      apiKey: '0bcbf591c54a019f9007066309bf0c15'
-    });
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
+      },
+      algolia: {
+        container: '#docsearch',
+        appId: 'O42K63FG2E',
+        indexName: 'SpiderJockey',
+        apiKey: '0bcbf591c54a019f9007066309bf0c15'
       },
       navbar: {
         title: 'Bibliothecula',
