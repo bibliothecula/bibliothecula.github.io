@@ -7,9 +7,10 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 
-export default function SortableTable({ columns, data }) {
+export default function SortableTable({ columns, data, filters = [] }) {
   const [sorting, setSorting] = React.useState([]);
   const [globalFilter, setGlobalFilter] = React.useState('');
+  const [columnFilters, setColumnFilters] = React.useState([]);
 
   const table = useReactTable({
     data,
@@ -17,9 +18,12 @@ export default function SortableTable({ columns, data }) {
     state: {
       sorting,
       globalFilter,
+      columnFilters,
     },
+
     onSortingChange: setSorting,
     onGlobalFilterChange: setGlobalFilter,
+    onColumnFiltersChange: setColumnFilters,
 
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
@@ -28,20 +32,93 @@ export default function SortableTable({ columns, data }) {
     globalFilterFn: 'includesString',
   });
 
+  function clearFilters() {
+    setGlobalFilter('');
+    setColumnFilters([]);
+  }
+
   return (
     <div>
       {/* Search */}
       <input
         type="text"
         placeholder="Search resources..."
-        value={globalFilter ?? ''}
+        value={globalFilter}
         onChange={e => setGlobalFilter(e.target.value)}
         style={{
-          marginBottom: '1rem',
-          padding: '0.5rem',
           width: '100%',
+          padding: '0.6rem',
+          marginBottom: '1rem',
         }}
       />
+
+      {/* Filters */}
+      {filters.length > 0 && (
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '1rem',
+            marginBottom: '1rem',
+          }}
+        >
+          {filters.map(filter => {
+            const column = table.getColumn(filter.id);
+
+            if (!column) return null;
+
+            const selected =
+              column.getFilterValue() || [];
+
+            function toggleValue(value) {
+              const current = column.getFilterValue() || [];
+
+              const next = current.includes(value)
+                ? current.filter(v => v !== value)
+                : [...current, value];
+
+              column.setFilterValue(
+                next.length > 0 ? next : undefined
+              );
+            }
+
+            return (
+              <div key={filter.id}>
+                <strong>{filter.label}</strong>
+
+                {filter.options.map(option => (
+                  <label
+                    key={option}
+                    style={{
+                      display: 'block',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selected.includes(option)}
+                      onChange={() => toggleValue(option)}
+                    />{' '}
+                    {option}
+                  </label>
+                ))}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Clear filters */}
+      {(globalFilter || columnFilters.length > 0) && (
+        <button
+          onClick={clearFilters}
+          style={{
+            marginBottom: '1rem',
+          }}
+        >
+          Clear filters
+        </button>
+      )}
 
       {/* Table */}
       <table>
@@ -58,6 +135,7 @@ export default function SortableTable({ columns, data }) {
                         header.column.columnDef.header,
                         header.getContext()
                       )}
+
                       {{
                         asc: ' ↑',
                         desc: ' ↓',
@@ -85,6 +163,12 @@ export default function SortableTable({ columns, data }) {
           ))}
         </tbody>
       </table>
+
+      {/* Result count */}
+      <p>
+        Showing {table.getFilteredRowModel().rows.length} of{' '}
+        {data.length} resources
+      </p>
     </div>
   );
 }
