@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import SearchBar from '@theme/SearchBar';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -15,6 +16,9 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.homeSearch}>
+          <SearchBar />
+          </div>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
