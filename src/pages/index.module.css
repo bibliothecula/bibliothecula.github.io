@@ -21,3 +21,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.homeSearch {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.homeSearch :global(.DocSearch-Button) {
+  width: min(600px, 90vw);
+  height: 50px;
+  font-size: 1rem;
+}
