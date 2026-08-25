@@ -9,13 +9,13 @@ ___
 a diminutive from Latin organum "instrument," \
 in Medieval Latin "organ of the body" (see organ).
 
-(Source: [_Etymonline_](https://www.etymonline.com/word/organelle))
+(Source: [_Etymonline_](/https://www.etymonline.com/word/organelle/))
 ___
 # Classification
 1. **Membrane-Bound** v/s **Non Membrane-Bound** \
   - In a more restrictive definition, only _membrane-bound_ ones are included.
   - In the most restrictive definition, only the _endosymbiotic membrane-bound_ ones are included.
-  - (Source: [_Wikipedia_](https://en.wikipedia.org/wiki/Organelle#cite_note-organelleEvolution2008-11))
+  - (Source: [_Wikipedia_](/https://en.wikipedia.org/wiki/Organelle#cite_note-organelleEvolution2008-11))
 
 2. On The Basis of _Their Structure_
 3. On The Basis of _Their Function_
