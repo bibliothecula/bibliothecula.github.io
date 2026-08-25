@@ -18,6 +18,28 @@ ___
 import SortableTable from '@site/src/components/SortableTable';
 
 <SortableTable
+  filters={[
+    {
+      id: 'website',
+      label: 'Website',
+      options: ['Khan Academy'],
+    },
+    {
+      id: 'level',
+      label: 'Level',
+      options: ['Beginner', 'Intermediate', 'Advanced'],
+    },
+    {
+      id: 'freePaid',
+      label: 'Access',
+      options: ['Free', 'Paid'],
+    },
+    {
+      id: 'format',
+      label: 'Format',
+      options: ['Video', 'Article'],
+    },
+  ]}
   columns={[
     {
       accessorKey: 'sNo',
