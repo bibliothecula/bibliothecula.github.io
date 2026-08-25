@@ -1,4 +1,4 @@
-# Cell Organelles 
+
 ## Overview
 An organelle is a specialized subunit, within a biological cell, that has a specific function (Source: [_Wikipedia_](https://en.wikipedia.org/wiki/Organelle))
 ___
@@ -25,6 +25,8 @@ ___
 | 6. | [Khan Academy](https://khanacademy.org) | Learn: Mitochondria and chloroplasts | AP / College Biology | [_Link_](https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/cell-structures-and-their-functions/a/chloroplasts-and-mitochondria?referrer=share_link) | Free | Article |
 | 7. | [Khan Academy](https://khanacademy.org) | Introduction to cilia, flagella and pseudopodia | AP / College Biology | [_Link_](https://www.khanacademy.org/science/ap-biology/cell-structure-and-function/cell-size/v/introduction-to-cilia-flagella-and-pseudopodia?referrer=share_link) | Free | Video |
 | 8. | [Khan Academy](https://khanacademy.org) | Cellular organelles and structure | MCAT | [_Link_](https://www.khanacademy.org/test-prep/mcat/cells/eukaryotic-cells/a/organelles-article?referrer=share_link) | Free | Article |
+| 9. | [Khan Academy](https://khanacademy.org) | The Nucleus | MCAT | [_Link_](https://www.khanacademy.org/test-prep/mcat/cells/eukaryotic-cells/v/the-nucleus?referrer=share_link) | Free | Video |
+| 10. | [Khan Academy](https://khanacademy.org) | Mitochondria | MCAT | [_Link_](https://www.khanacademy.org/test-prep/mcat/cells/eukaryotic-cells/v/mitochondria?referrer=share_link) | Free | Video |
 
 
 
