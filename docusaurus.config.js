@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bibliothecula',
-  tagline: 'An Open Source Library on Microbiology',
+  tagline: 'Trying to Index Resources for Biology at All Levels Big and Small, So You Don\'t Spend Hours Searching',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
