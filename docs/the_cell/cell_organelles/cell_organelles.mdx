@@ -38,7 +38,12 @@ import SortableTable from '@site/src/components/SortableTable';
     {
       accessorKey: 'link',
       header: 'Link',
-    },
+      cell: ({ getValue }) => (
+        <a href={getValue()} target="_blank" rel="noopener noreferrer">
+          Link
+        </a>
+      ),
+    }
     {
       accessorKey: 'freePaid',
       header: 'Free / Paid',
