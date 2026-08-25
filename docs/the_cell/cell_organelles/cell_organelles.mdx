@@ -48,6 +48,7 @@ import SortableTable from '@site/src/components/SortableTable';
     {
       accessorKey: 'website',
       header: 'Website',
+      filterFn: 'multiSelect',
     },
     {
       accessorKey: 'title',
@@ -56,10 +57,12 @@ import SortableTable from '@site/src/components/SortableTable';
     {
       accessorKey: 'level',
       header: 'Level',
+      filterFn: 'multiSelect',
     },
     {
       accessorKey: 'link',
       header: 'Link',
+      filterFn: 'multiSelect',
       cell: ({ getValue }) => (
         <a href={getValue()} target="_blank" rel="noopener noreferrer">
           Link
@@ -69,10 +72,12 @@ import SortableTable from '@site/src/components/SortableTable';
     {
       accessorKey: 'freePaid',
       header: 'Free / Paid',
+      filterFn: 'multiSelect',
     },
     {
       accessorKey: 'format',
       header: 'Format',
+      filterFn: 'multiSelect',
     },
   ]}
   data={[
